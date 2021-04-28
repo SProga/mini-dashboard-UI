@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/app.css" />
+    <title>dashboard | Shane Proverbs</title>
+  </head>
+  <body>
+    <main>
+      <section class="container">
+        <ul class="menu">
+          <button class="nav-toggler">
+            <span class="nav-btn">&#10148;</span>
+          </button>
+          <li class="center">
+            <a href="#"
+              ><img class="logo" src="assets/imgs/avatar.png" alt="user image"
+            /></a>
+            <h3 class="emp-text">Shane Proverbs</h3>
+            <p class="emp-job-text">Full Stack Developer</p>
+          </li>
+
+          <li class="nav_item">
+            <a href="#" class="nav_link">
+              <svg class="icon mr-s">
+                <use xlink:href="assets/imgs/sprite.svg#profile-user"></use>
+              </svg>
+              Profiles</a
+            >
+          </li>
+          <li class="nav_item">
+            <a href="#" class="nav_link">
+              <svg class="icon mr-s">
+                <use xlink:href="assets/imgs/sprite.svg#writing"></use>
+              </svg>
+              Posts</a
+            >
+          </li>
+          <li class="nav_item">
+            <a href="#" class="nav_link">
+              <svg class="icon mr-s">
+                <use xlink:href="assets/imgs/sprite.svg#document"></use>
+              </svg>
+              Pages</a
+            >
+          </li>
+          <li class="nav_item">
+            <a href="#" class="nav_link">
+              <svg class="icon mr-s">
+                <use xlink:href="assets/imgs/sprite.svg#bar-chart"></use>
+              </svg>
+              Charts</a
+            >
+          </li>
+        </ul>
+
+        <section class="dashboard">
+          <h1 class="dashboard-header"><small>mini</small> DashBoard UI</h1>
+          <div class="cards">
+            <div class="card">
+              <div class="wrapper">
+                <a href="#" class="category circle--1">
+                  <svg class="icon--dashboard">
+                    <use xlink:href="assets/imgs/view.svg#view"></use>
+                  </svg>
+                </a>
+              </div>
+
+              <div class="status">
+                <h3>334</h3>
+                <p>Total New Visitors</p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="wrapper">
+                <a href="#" class="category circle--2">
+                  <svg class="icon--dashboard">
+                    <use xlink:href="assets/imgs/employee.svg#employee"></use>
+                  </svg>
+                </a>
+              </div>
+
+              <div class="status">
+                <h3>33</h3>
+                <p>Manage Employees</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="wrapper">
+                <a href="#" class="category circle--3">
+                  <svg class="icon--dashboard">
+                    <use xlink:href="assets/imgs/checklist.svg#checklist"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="status">
+                <span>
+                  <h3>334</h3>
+                  <p>View New Inventory</p>
+                </span>
+              </div>
+            </div>
+            <div class="card">
+              <div class="wrapper">
+                <a href="#" class="category circle--4">
+                  <svg class="icon--dashboard">
+                    <use xlink:href="assets/imgs/money.svg#money"></use>
+                  </svg>
+                </a>
+              </div>
+
+              <div class="status">
+                <h3>334</h3>
+                <p>Revenue Week</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <svg class="icon--container">
+        <use xlink:href="assets/imgs/arrow.svg#blur"></use>
+      </svg>
+    </main>
+
+    <script src="assets/app.js"></script>
+  </body>
+</html>

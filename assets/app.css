@@ -1,0 +1,245 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #141e30; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #243b55,
+    #4f6081
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.container {
+  display: flex;
+  width: 60%;
+  background-color: #f3f4f7;
+  background-image: linear-gradient(315deg, #f3f4f7 0%, #caccd1 74%);
+  min-height: 70vh;
+  border-radius: 5rem;
+  overflow: hidden;
+  z-index: 500;
+}
+
+.menu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  min-height: 100%;
+  align-items: center;
+  background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+  border-radius: 5rem;
+  padding: 1.6rem;
+  list-style-type: none;
+  transition: all 1s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.menu > * {
+  transition: transform 0.5s ease-in;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.toggle-menu {
+  width: 0%;
+}
+.toggle-menu-content {
+  transform: translate(-20rem);
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+.center {
+  text-align: center;
+}
+h3.emp-text {
+  font-size: 1rem;
+}
+p.emp-job-text {
+  font-size: 1rem;
+}
+.nav_item:not(:first-child) {
+  font-size: 2rem;
+  width: 50%;
+  margin: 2rem 0;
+  border: 1px solid transparent;
+  padding: 0.2rem;
+}
+
+.nav_item:hover {
+  border: 1px solid rgb(6, 134, 238);
+  border-radius: 15px;
+}
+
+.nav_link {
+  display: flex;
+  color: #757575;
+  text-decoration: none;
+  align-items: center;
+}
+
+.icon {
+  width: 4rem;
+  height: 4rem;
+  fill: rgb(6, 134, 238);
+}
+.mr-s {
+  margin-right: 1rem;
+}
+
+.nav-toggler {
+  position: absolute;
+  top: 30%;
+  left: 100%;
+  padding: 2rem 1rem;
+  border: none;
+  background-color: #d7e1ec;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  cursor: pointer;
+}
+
+/* Dashboard section */
+
+.dashboard-header {
+  font-size: 4rem;
+  color: #546e7a;
+}
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 3rem;
+  flex: 1 1 70%;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  margin: 1rem;
+  flex: 1 1 40%;
+  height: 20rem;
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.5)
+  );
+  border-radius: 5px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex: 0 0 100%;
+}
+
+.circle--1,
+.circle--2,
+.circle--3,
+.circle--4 {
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.circle--1 {
+  background-color: #8ae9b3;
+  background-image: linear-gradient(315deg, #8ae9b3 0%, #c8d6e5 74%);
+}
+.circle--2 {
+  background-color: #fec84e;
+  background-image: linear-gradient(315deg, #fec84e 0%, #ffdea8 74%);
+}
+.circle--3 {
+  background-color: #a4508b;
+  background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%);
+}
+.circle--4 {
+  background-color: #f7accf;
+  background-image: linear-gradient(147deg, #f7accf 0%, #ff1053 74%);
+}
+
+.highlight {
+  border: 1px solid currentColor;
+  box-shadow: 0 3px 4px currentColor;
+}
+
+.icon--dashboard {
+  position: absolute;
+  top: -24%;
+  left: 10%;
+  fill: #fff;
+  width: 8rem;
+}
+
+[class^="circle-"]:hover {
+  transform: translateY(-2px);
+}
+
+.status {
+  text-align: center;
+}
+.status h3 {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+.status p {
+  color: #757575;
+  font-size: 1.5rem;
+}
+
+small {
+  font-weight: 300;
+}
+
+.nav-btn {
+  display: inline-block;
+  transition: all 0.5s;
+  transform: rotate(180deg);
+}
+.rotate {
+  transform: rotate(0);
+}
+
+.icon--container {
+  position: absolute;
+  height: 22rem;
+  width: 22rem;
+  bottom: 0;
+  right: 15rem;
+  transform: rotate(32deg) translate(-16rem);
+  z-index: 300;
+  fill: rgba(255, 255, 255, 0.1);
+}
