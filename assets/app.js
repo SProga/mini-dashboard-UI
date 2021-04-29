@@ -5,7 +5,7 @@ let category = document.querySelectorAll(".category");
 let style = null;
 
 btn.addEventListener("click", () => {
-  menu.classList.toggle("toggle-menu");
+  menu.classList.toggle("toggle-menu"); //reduce width of container to 3%
   for (let i = 0; i < menu.children.length; i++) {
     if (!menu.children[i].classList.contains("nav-toggler"))
       menu.children[i].classList.toggle("toggle-menu-content");
@@ -23,3 +23,18 @@ category.forEach((cat) => {
     cat.parentElement.parentElement.style.boxShadow = "unset";
   });
 });
+
+// A little life hack for preverting transitions while the page is resized
+function removeTransitions() {
+  var elements = document.getElementsByTagName("*");
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].classList.add("notransition");
+  }
+  setTimeout(() => {
+    for (var i = 0; i < elements.length; i++) {
+      elements[i].classList.remove("notransition");
+    }
+  }, 500);
+}
+
+window.onresize = removeTransitions;

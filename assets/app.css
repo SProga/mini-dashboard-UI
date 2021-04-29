@@ -52,16 +52,13 @@ main {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-.menu > * {
-  transition: transform 0.5s ease-in;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
+
 .toggle-menu {
-  width: 0;
+  width: 3%;
 }
 .toggle-menu-content {
-  transform: translate(-20rem);
+  transform: translate(-20rem) scale(0);
+  font-size: 0.5rem;
 }
 
 .logo {
@@ -78,12 +75,20 @@ h3.emp-text {
 p.emp-job-text {
   font-size: 1rem;
 }
+
+ul.menu li {
+  transition: all 0.5s ease-in;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
 .nav_item:not(:first-child) {
   display: flex;
   font-size: 2rem;
   margin: 1.2rem 0;
   border: 1px solid transparent;
   padding: 0.4rem;
+  transition: border 0.1s linear, transform 0.5s ease-in;
 }
 
 .nav_item:hover {
@@ -113,10 +118,19 @@ p.emp-job-text {
   left: 100%;
   padding: 2rem 1rem;
   border: none;
-  background-color: #d7e1ec;
+  background-color: #e8eef4;
   border-top-right-radius: 2rem;
   border-bottom-right-radius: 2rem;
   cursor: pointer;
+}
+.copyright {
+  margin-top: auto;
+  margin-bottom: 2rem;
+  color: #757575;
+}
+
+.notransition {
+  transition: none !important;
 }
 
 /* Dashboard section */
@@ -124,6 +138,7 @@ p.emp-job-text {
 .dashboard-header {
   font-size: 4rem;
   color: #546e7a;
+  text-align: center;
 }
 .dashboard {
   display: flex;
@@ -148,9 +163,9 @@ p.emp-job-text {
     rgba(255, 255, 255, 0.8),
     rgba(255, 255, 255, 0.5)
   );
-  border-radius: 5px;
-  border-top-right-radius: 15px;
-  border-bottom-left-radius: 15px;
+  border-radius: 15px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
   justify-content: center;
   flex-wrap: wrap;
   padding: 1rem;
@@ -228,6 +243,7 @@ small {
   display: inline-block;
   transition: all 0.5s;
   transform: rotate(180deg);
+  color: #0686ee;
 }
 .rotate {
   transform: rotate(0);
@@ -284,6 +300,9 @@ small {
   .nav_item {
     flex-wrap: wrap;
     margin: 2rem 2rem !important; /* have to add important here although its not good practise because of inline style */
+  }
+  .copyright {
+    display: none;
   }
 }
 
