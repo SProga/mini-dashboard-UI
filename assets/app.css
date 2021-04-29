@@ -29,7 +29,7 @@ main {
 
 .container {
   display: flex;
-  width: 60%;
+  width: 80%;
   background-color: #f3f4f7;
   background-image: linear-gradient(315deg, #f3f4f7 0%, #caccd1 74%);
   border-radius: 5rem;
@@ -48,7 +48,7 @@ main {
   border-radius: 5rem;
   padding: 1.6rem;
   list-style-type: none;
-  transition: width 0.5s ease, opacity, transform, visibility 1s ease;
+  transition: all 1s ease;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
@@ -69,6 +69,7 @@ main {
   height: 100px;
 }
 .center {
+  margin-bottom: 1rem;
   text-align: center;
 }
 h3.emp-text {
@@ -80,7 +81,7 @@ p.emp-job-text {
 .nav_item:not(:first-child) {
   display: flex;
   font-size: 2rem;
-  margin: 2rem 0;
+  margin: 1.2rem 0;
   border: 1px solid transparent;
   padding: 0.4rem;
 }
@@ -92,6 +93,7 @@ p.emp-job-text {
 .nav_link {
   display: flex;
   color: #757575;
+  font-size: 1.4rem;
   text-decoration: none;
   align-items: center;
 }
@@ -165,6 +167,9 @@ p.emp-job-text {
 .circle--2,
 .circle--3,
 .circle--4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   width: 10rem;
   height: 10rem;
@@ -195,9 +200,6 @@ p.emp-job-text {
 }
 
 .icon--dashboard {
-  position: absolute;
-  top: -24%;
-  left: 10%;
   fill: #fff;
   width: 8rem;
 }
@@ -266,11 +268,13 @@ small {
     width: 100%;
     min-height: 0;
     min-width: 250px;
-    padding: 0;
+    padding: 1.5rem 0;
     margin: 0;
     transition: none;
   }
-
+  .menu > * {
+    transition: none;
+  }
   .nav-toggler {
     display: none;
   }
@@ -278,9 +282,8 @@ small {
     width: 100%;
   }
   .nav_item {
-    border: 2px solid red;
     flex-wrap: wrap;
-    justify-content: center;
+    margin: 2rem 2rem !important; /* have to add important here although its not good practise because of inline style */
   }
 }
 
@@ -294,6 +297,16 @@ small {
 
   .cards {
     flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 70%;
+  }
+
+  .container {
+    width: 60%;
   }
 }
 
