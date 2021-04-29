@@ -32,7 +32,6 @@ main {
   width: 60%;
   background-color: #f3f4f7;
   background-image: linear-gradient(315deg, #f3f4f7 0%, #caccd1 74%);
-  min-height: 70vh;
   border-radius: 5rem;
   overflow: hidden;
   z-index: 500;
@@ -43,13 +42,13 @@ main {
   display: flex;
   flex-direction: column;
   width: 30%;
-  min-height: 100%;
+  min-height: 70vh;
   align-items: center;
   background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
   border-radius: 5rem;
   padding: 1.6rem;
   list-style-type: none;
-  transition: all 1s ease;
+  transition: width 0.5s ease, opacity, transform, visibility 1s ease;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
@@ -59,7 +58,7 @@ main {
   backface-visibility: hidden;
 }
 .toggle-menu {
-  width: 0%;
+  width: 0;
 }
 .toggle-menu-content {
   transform: translate(-20rem);
@@ -79,16 +78,15 @@ p.emp-job-text {
   font-size: 1rem;
 }
 .nav_item:not(:first-child) {
+  display: flex;
   font-size: 2rem;
-  width: 50%;
   margin: 2rem 0;
   border: 1px solid transparent;
-  padding: 0.2rem;
+  padding: 0.4rem;
 }
 
 .nav_item:hover {
   border: 1px solid rgb(6, 134, 238);
-  border-radius: 15px;
 }
 
 .nav_link {
@@ -242,4 +240,65 @@ small {
   transform: rotate(32deg) translate(-16rem);
   z-index: 300;
   fill: rgba(255, 255, 255, 0.1);
+}
+
+@media only screen and (max-width: 75em) {
+  .toggle-menu-content {
+    transform: translate(0);
+  }
+
+  main {
+    padding: 2rem;
+  }
+  .container {
+    flex-direction: column;
+    min-width: 360px;
+    width: 90%;
+    min-height: 70vh;
+  }
+  .menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 0;
+    width: 100%;
+    min-height: 0;
+    min-width: 250px;
+    padding: 0;
+    margin: 0;
+    transition: none;
+  }
+
+  .nav-toggler {
+    display: none;
+  }
+  .center {
+    width: 100%;
+  }
+  .nav_item {
+    border: 2px solid red;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .toggle-menu-content {
+    transform: translate(0);
+  }
+  .menu {
+    flex-direction: column;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 156.25em) {
+  html {
+    font-size: 80%;
+  }
 }
